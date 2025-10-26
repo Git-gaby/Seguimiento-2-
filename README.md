@@ -1,4 +1,4 @@
-# 📘 Seguimiento-2 — README
+# 📘 Seguimiento-2.1 — README
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python\&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)
