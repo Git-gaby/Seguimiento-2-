@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📘 Proyecto Seguimiento 2 - Git-gaby</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+      margin: 2rem auto;
+      max-width: 900px;
+      padding: 1rem 2rem;
+    }
+    h1, h2, h3 {
+      color: #38bdf8;
+    }
+    a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    pre {
+      background: #1e293b;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+    }
+    code {
+      color: #fcd34d;
+      font-family: monospace;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>📘 Proyecto - Seguimiento 2</h1>
+  <p>Autor: <strong>Gabriel</strong> — <a href="https://github.com/Git-gaby" target="_blank">@Git-gaby</a></p>
+  <div id="content">⏳ Cargando contenido del README...</div>
+
+  <footer>
+    <p>Hecho con ❤️ por Gabriel | Proyecto Seguimiento 2</p>
+  </footer>
+
+  <script>
+    fetch("https://raw.githubusercontent.com/Git-gaby/Seguimiento-2-/main/README.md")
+
+      .then(response => {
+        if (!response.ok) throw new Error("No se pudo cargar el README.md");
+        return response.text();
+      })
+      .then(text => {
+        document.getElementById("content").innerHTML = marked.parse(text);
+      })
+      .catch(err => {
+        document.getElementById("content").innerHTML = "<p>❌ Error al cargar el README.md.</p>";
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
